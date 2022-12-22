@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Wearher App - #7hw</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Type a city.."
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm w-200"
+              />
+            </div>
+          </div>
+        </form>
+        <h1 id="city">Kyiv</h1>
+        <ul>
+          <li>Last updated: <span id="date"> </span></li>
+          <li id="description" class="description"></li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix">
+              <div class="float-left">
+                <img
+                  src="http://openweathermap.org/img/wn/04d@2x.png"
+                  alt="cloudy"
+                  id="icon"
+                />
+                <span class="temperature" id="temperature"></span>
+                <span class="units"
+                  >°C| <a href="#" id="faherenheit-link">°F </a></span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
+            </ul>
+          </div>
+        </div>
+        <div class="weather-forecast">
+          <div class="row">
+            <div class="col-2">
+              <div class="weather-date">Thu</div>
+              <div class="weather-temperature">
+                <span class="weather-tem-max"> 12</span>
+                <span class="weather-tem-min"> 5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <small>
+        <a
+          href="https://github.com/Katrya-Kovalova/Myweather-app"
+          target="_blank"
+        >
+          Open-source code
+        </a>
+        by Katya Kovalova
+      </small>
+    </div>
+
+    <script src="src/app.js"></script>
+  </body>
+</html>
