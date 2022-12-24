@@ -35,7 +35,7 @@ function displayForecast() {
       <div class="col-2">
         <div class="weather-forecast-date">${day}</div>
         <img
-          src="http://openweathermap.org/img/wn/50d@2x.png"
+          src="https://ssl.gstatic.com/onebox/weather/48/snow_s_rain.png"
           alt=""
           width="42"
         />
