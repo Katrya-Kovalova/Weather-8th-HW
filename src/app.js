@@ -22,7 +22,42 @@ function formatDate(date) {
 
   return `${day} ${hours}:${minutes}`;
 }
-
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class=row`;
+  forecastHTML =
+    forecastHTML +
+    `
+            <div class="col-2">
+              <div class="weather-date">Thu</div>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/48/rain_light.png"
+                alt=""
+                width="42"
+              />
+              <div class="weather-temperature">
+                <span class="weather-tem-max"> 12</span>
+                <span class="weather-tem-min"> 5</span>
+              </div>
+          </div>`;
+  forecastHTML =
+    forecastHTML +
+    `
+            <div class="col-2">
+              <div class="weather-date">Thu</div>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/48/rain_light.png"
+                alt=""
+                width="42"
+              />
+              <div class="weather-temperature">
+                <span class="weather-tem-max"> 12</span>
+                <span class="weather-tem-min"> 5</span>
+              </div>
+          </div>`;
+  forecastHTML = `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -80,3 +115,4 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 searchCity("Kyiv");
+displayForecast();
